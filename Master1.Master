@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.Master.cs" Inherits="Toys_To_Give.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Source+Sans+3:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&family=Rubik:wght@300&display=swap');
+
+body {
+    margin: 0;
+    user-select: none;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px repeat(2,1fr) 70px;
+    padding: 10px;
+    grid-gap: 10px;
+    box-sizing: border-box;
+}
+
+    .container div {
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+a:link, a:visited, a:hover, a:active {
+    color: black;
+    text-decoration: none;
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+}
+.header-text{
+    font-family:'Readex Pro' , sans-serif;
+    font-size:28px;;
+}
+
+.log-in {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.log-in-text {
+    font-size: 30px;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.log-in-buttton {
+    height: 75px;
+    width: 75px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    background-color: lightblue;
+}
+
+    .log-in-buttton:hover {
+        background-color: darkblue;
+        color: white;
+    }
+
+.slider {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.contant1 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.contant2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.Home_Page_Logo{
+    height:100px;
+    width:150px;
+}
+.log-div{
+    direction:rtl;
+    height:500px;
+    width:400px;
+    text-align: center;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+
+    </style>
+    <script>
+        function log_in_page() {
+            window.open("Log_Page.aspx", "_self");
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>    
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+</body>
+</html>
